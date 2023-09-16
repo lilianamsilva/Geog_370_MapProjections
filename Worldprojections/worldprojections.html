@@ -8,52 +8,77 @@
 <body>
     <h1>In this project I learned how to display images in different projections</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h2 style="color:red">Description</h2>
+    <p>I downloaded the Cultural Vector Layer off of Natural Earth. I then exported that layer into QGIS. 
+        I had already installed Indicatrix mapper as a pluggin into QGIS. This helped me in finding the cap and line segments for each projecttion.
+        Next, I would click onto the project properties to see which projection I wanted the certain layer to be in.
+        If I did not find the certain Authority ID right away, I would use the filter option. This would then limit my options.
+        I would then click on my preffered/required projection and apply it to the map. This lead the layer to contort to the specified coordinates
+        Last, I made it an image with the layer function and exported it as a png to my maps folder. I continued to do this for each projection.</p>
     
     <h2>WGS84 Projection</h2>
-    <h3>The WGS84 Projection has a linear scale as well. 
-        The area is also distorted around the poles to try and keep the original length of each land.
-        This helps to preserve the area, angles, and directions.
-    </h3>
+    <h3>The WGS84 Projection has a linear scale.</h3>
+    <h3>Pros: Preserves the area, angles, and directions.</h3>
+    <h3>Cons: The area is distorted around the poles to try and keep the original length of each land.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The Aitoff Projection is to take the shape of an ellipse.</h3>
+    <h3>Pros: The scale along the equator and meridian are correct.</h3>
+    <h3>Cons: Mostly everything is distorted as you move from the equator and meridian.</h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
     <h2>Psuedo Mercator</h2>
-    <h3>The Psuedo Mercator has a linear scale that is equal in all directions.
-        This preserves the angles and directions. 
-        However, as we get further from the equator, the lands closer to the poles begin to distort causing unreliable areas.</h3>
+    <h3>The Psuedo Mercator has a linear scale that is equal in all directions.</h3>
+    <h3>Pros: Preserves the angles and directions.</h3> 
+    <h3>Cons: As we get further from the equator, the lands closer to the poles begin to distort causing unreliable areas.</h3>
     <a href=".//maps/EPSG_ 3857.png">
     <img src=".//maps/EPSG_ 3857.png" alt="Psuedo Mercator" width='700px'>
     </a>
     <h2>North Pole Azimuthal Equidistant</h2>
-    <h3>Some observations</h3>
+    <h3>The North Pole Azimuthal Equidistant is a projection from the North Pole.</h3>
+    <h3>Pros: All the angles between the lines are equal. The lines from the poles are true to real time.</h3>
+    <h3>Cons: The land distortion becomes greater as you grow farther from the poll.</h3>
     <a href=".//maps/EPSG_ 102016.png">
     <img src=".//maps/EPSG_ 102016.png" alt="North Pole Azimuthal Equidistant" width='700px'>
     </a>
     <h2>Sphere Winkel I</h2>
-    <h3>Some observations</h3>
+    <h3>The Sphere Winkel I projection is coordinates using the arithmetic mean</h3>
+    <h3>Pros: The curves and angles are equally spaced. The sizes and shape of the land areas are close to the sphere lands.</h3>
+    <h3>Cons: The sizes and lands are distorted as to try to keep the angles and distance.</h3>
     <a href=".//maps/EPSG_53018.png">
-    <img src=".//maps/EPSG_53018.png" alt="North Pole Azimuthal Equidistant" width='700px'>
+    <img src=".//maps/EPSG_53018.png" alt="Sphere Winkel I" width='700px'>
     </a>
     <h2>World Cylindrical Equal Area</h2>
-    <h3>Some observations</h3>
+    <h3>It is good for large-sclae mapping but not for small-scale. The areas surrounding the lines are closest to the same values.</h3>
+    <h3>Pros:It keeps the sizes equal of the areas.</h3>
+    <h3>Cons: It still distorts the land shapes and angles.</h3>
     <a href=".//maps/EPSG_54034.png">
     <img src=".//maps/EPSG_54034.png" alt="World Cylindrical Equal Area" width='700px'>
     </a>
     <h2>World Equidistant Conic</h2>
-    <h3>Some observations</h3>
+    <h3>The World Equidistant Conic is good for regions that are in dimensions going from west-east.</h3> 
+    <h3>Pros: The directions and distances are good towards the north pole.</h3>
+    <h3>Con: It does not show the whole "globe." This one gets cut off. There are extreme distortions to the hemispheres and areas.</h3> 
     <a href=".//maps/EPSG_ 54027.png">
-    <img src=".//maps/EPSG_ 54027.png" alt="World Cylindrical Equal Area" width='600px'>
+    <img src=".//maps/EPSG_ 54027.png" alt="World Equidistant Conic" width='600px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
-    <p></p>
+    <h2>Sphere Quartic Authalic</h2>
+    <h3>The Sphere Quartic Authalic is an equal-area map that is a distribution of spherical variables for the coordinates.</h3>
+    <h3>Pros: Equal area all through out the map and distances.</h3>
+    <h3>Cons: Distortion of lands.</h3>
+    <a href=".//maps/EPSG_ 53022.png">
+    <img src=".//maps/EPSG_ 53022.png" alt="Sphere Quartic Authalic" width='600px'>
+    </a>
+    <h2>Sphere Robinson</h2>
+    <h3>The Sphere Robinson is a very unique projection. It tries to use the least amount of distortion.</h3>
+    <h3>Pros: The distance latitude wise is close to the sphereical coordinates.</h3>
+    <h3>Cons: Distorts all areas: shape, area, distance, angles, and direction. The area distorition gorws with the latitude but does not change with the longitude.</h3>
+    <a href=".//maps/EPSG_ 53030.png">
+    <img src=".//maps/EPSG_ 53030.png" alt="Sphere Robinson" width='600px'>
+    </a>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
 </body>
